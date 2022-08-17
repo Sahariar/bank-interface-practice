@@ -6,6 +6,7 @@
         const depositField = document.getElementById('user-deposit');
         const depositFieldValue = depositField.value;
         const depositFieldValueFloat = parseFloat(depositFieldValue);
+        depositField.value = '';
 
         const depositOld = document.getElementById('deposit-view');
         const depositOldValue = depositOld.innerText;
@@ -18,11 +19,9 @@
         // console.log(depositFieldValueFloat, depositOldValueFloat,balanceOldValueFloat );
 
         if(isNaN(depositFieldValueFloat)){
-            depositField.value = '';
             alert('Sorry Please provide a valid Number');
         }else{
-            depositField.value = '';
-            // calculate old and new value to current deposit value const.
+        // calculate old and new value to current deposit value const.
         const currentDepositValue = depositFieldValueFloat + depositOldValueFloat;
         // show that value to depositeoldvalue view.
         depositOld.innerText = currentDepositValue;

@@ -7,3 +7,8 @@
  }
 
  document.getElementById('sp-color').style.color = randomeColor();
+ const spacialColors = document.getElementsByClassName('sp-color');
+ 
+ for (const spacialColor of spacialColors) {
+    spacialColor.style.backgroundColor = randomeColor();
+ }
